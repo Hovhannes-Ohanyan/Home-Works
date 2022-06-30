@@ -1,0 +1,101 @@
+def contain(data, val):
+    i = 0
+    check = 0
+    while i < len(data):
+        if data[i] == val:
+            check = 1
+        i = i + 1
+
+    if check == 1:
+        return True
+    else:
+        return False
+
+
+new_list = [1, 2, 3, 4, 1]
+
+
+# print(contain(new_list, 2))
+
+
+def pop(data, i):
+    if i == "None" or i == len(data) - 1:
+        value = data[-1]
+        data = data[:-1]
+        return value
+
+    elif i > 0 and i >= len(data) or 0 > i < -len(data):
+        raise ValueError('pop index out of range')
+
+    else:
+        before_i = data[:i]
+        after_i = data[i + 1:]
+        answer = before_i + after_i
+        return data[i]
+
+
+new_list = [1, 3, 7, 9, 10]
+
+
+# print(pop(new_list, -3))
+# print(pop(new_list, 6))
+
+
+def remove_all(data, value):
+    i = 0
+    while i < len(data):
+        if data[i] == value:
+            data.remove(value)
+        i += 1
+    return data
+
+
+data_list = [1, 2, 5, 7, 9, 10, 14]
+
+
+# print(remove_all(data_list, 4))
+
+def reverse(data):
+    i = len(data) - 1
+    k = 0
+    while k < i:
+        temp = data[k]
+        data[k] = data[i]
+        data[i] = temp
+        i -= 1
+        k += 1
+    return data
+
+
+list = [1, 2, 2, 3, 3, 4, 4, 5]
+
+
+# print(reverse(list))
+
+def min(data):
+    minimum = data[0]
+    i = 0
+    while i < len(data):
+        if data[i] <= minimum:
+            minimum = data[i]
+        i += 1
+    return minimum
+
+
+new_list = [1, 2, 3, 4, -5, 7, -20]
+
+
+# print(min(new_list))
+
+def max(data):
+    maximum = data[0]
+    i = 0
+    while i < len(data):
+        if data[i] >= maximum:
+            maximum = data[i]
+        i += 1
+    return maximum
+
+
+new_list = [1, 2, 3, 4, -5, 7, -20]
+# print(max(new_list))
