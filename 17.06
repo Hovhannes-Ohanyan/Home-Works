@@ -1,0 +1,47 @@
+def map(func, data):
+    return func(data)
+
+
+def triple(data):
+    new_lst = []
+
+    for i in data:
+        new_lst.append(3 * i)
+    return new_lst
+
+
+lst = [1, 2, 3, 4, 5, 6]
+#print(map(triple, lst))
+
+
+def map3(funct, data1, data2, data3):
+    res = []
+    for i in range(3):
+        res.append(funct(data1[i], data2[i], data3[i]))
+    return res
+
+
+def sum(data1, data2, data3):
+    return data1 + data2 + data3
+
+
+lst1 = [1, 2, 3]
+lst2 = [10, 20, 30]
+lst3 = [100, 200, 300, 400]
+#print(map3(sum, lst1, lst2, lst3))
+
+
+def map2(funct, data1, data2):
+    res = []
+    for i in range(len(data1)):
+        res.append(funct(data1[i], data2[i]))
+    return res
+
+
+def pow(data1, data2):
+    return data1 ** data2
+
+
+base = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+exp = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#print(map2(pow, base, exp))
