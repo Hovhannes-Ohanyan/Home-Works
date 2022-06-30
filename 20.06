@@ -1,0 +1,188 @@
+import math
+import time
+
+name = input("Name: ")
+address = input("Address: ")
+print(f"Your name is: {name}\nYour address is: {address}")
+
+name = input("Name: ")
+print(f"Hello, dear {name}!")
+
+length = float(input("Insert the length of a room(m): "))
+width = float(input("Insert the width of a room(m2): "))
+print(f"Area of the room equals: {length * width} m2")
+
+length = float(input("Insert the length of a plot(ft): "))
+width = float(input("Insert the width of a plot(ft): "))
+plot = length * width / 43560
+print(f"Area of the plot equals: {plot} acres")
+
+under_1_bottles = float(input("How many under 1L bottles do you have?: "))
+more_than_1_bottles = int(input("How many more than 1L bottles do you have?: "))
+cash = under_1_bottles * 0.10 + more_than_1_bottles * 0.25
+
+print("You have: $", format(cash, ".2f"), "cash")
+
+order = float(input("Insert amount of order: "))
+tip = order * 18 / 100
+tax = order * 20 / 100
+pay = order * 18 / 100 + order * 20 / 100 + order
+print("Tip:", tip, "\nTax:", tax, "\nTotal:", format(pay, ".2f"))
+
+number = int(input("Insert number: "))
+for i in range(1, number + 1):
+    print(i)
+
+souvenir = int(input("How many souvenir do you have: "))
+details = int(input("How many details do you have: "))
+weight = souvenir * 75 + details * 120
+print("The load weights: ", weight, "g")
+
+investment = float(input("Insert the amount of your investment: "))
+first_year = investment + investment * 4 / 100
+second_year = first_year + first_year * 4 / 100
+third_year = second_year + second_year * 4 / 100
+print("First year: ", first_year, "\nSecond year: ", second_year, "\nThird year: ", third_year)
+
+a = int(input("Insert number a: "))
+b = int(input("Insert number b: "))
+sum = a + b
+difference = a - b
+division = a / b
+remainder = a % b
+log = math.log10(a)
+print(f"Sum: ", sum, "\nDifference: ", difference, "\nDivision: ", \
+      division, "\nRemainder: ", remainder, "\nLn(a): ", log)
+
+mpg = float(input("Insert MPG: "))
+convert_value = 0.425143707
+print(f"{mpg} MPG =  {mpg * convert_value} km/l")
+
+ft = float(input("Insert ft: "))
+inch = float(input("Insert inches: "))
+cm = (12 * ft + inch) * 2.54
+print(f"{cm} cm")
+
+distance = float(input("Insert the distance(ft): "))
+inches = 12 * distance
+yards = 0.333333333 * distance
+miles = 0.000189393939 * distance
+print(f"Inches: {inches}\nYards: {yards}\nMiles: {miles}")
+
+r = float(input("Insert radius: "))
+area = math.pi * r ** 2
+volume = 4 / 3 * math.pi * r ** 3
+print(f"Area: {area}\nVolume: {volume}")
+
+r = float(input("Insert r: "))
+h = float(input("Insert h: "))
+volume = math.pi * r ** 2 * h
+print(f"Volume: {format(volume, '.1f')}")
+
+v = float(input("Insert the initial velocity(v): "))
+d = float(input("Insert the distance: "))
+a = 9.8
+answer = math.sqrt(v ** 2 + 2 * a * d)
+print("Answer: ", answer)
+
+b = float(input("Insert b: "))
+h = float(input("Insert h: "))
+answer = (b * h) / 2
+print("Answer: ", answer)
+
+s1 = float(input("Insert s1: "))
+s2 = float(input("Insert s2: "))
+s3 = float(input("Insert s3: "))
+s = (s1 + s2 + s3) / 2
+area = math.sqrt(s * (s - s1) * (s - s2) * (s - s3))
+print("Area: ", area)
+
+days = int(input("Insert days: "))
+hours = int(input("Insert hours: "))
+minutes = int(input("Insert minutes: "))
+seconds = int(input("Insert seconds: "))
+answer = 86400 * days + 3600 * hours + 60 * minutes + seconds
+print("Answer: ", answer)
+
+
+
+
+print(time.asctime())
+
+
+
+
+months = {
+    "January": 31, "February": [28, 29], "March": 31, "April": 30, "May": 31,
+    "June": 30, "July": 31, "August": 31, "September": 30, "October": 31,
+    "November": 30, "December": 31
+}
+month = input("Insert the month: ")
+for i in months.keys():
+    if i == month:
+        print(months[month])
+
+vowels = ['a', 'e', 'i', 'o', 'u']
+vowel = input("Insert a letter: ")
+if vowel.isupper():
+    vowel = vowel.lower()
+if vowel == 'y':
+    print("y both a vowel and consonant")
+else:
+    for i in vowels:
+        if i == vowel:
+            print(vowel, "is a vowel")
+
+
+
+
+months = {
+    "January": 31, "February": 29, "March": 31, "April": 30, "May": 31,
+    "June": 30, "July": 31, "August": 31, "September": 30, "October": 31,
+    "November": 30, "December": 31
+}
+month = input("Insert the month: ")
+day = int(input("Insert the day: "))
+if month == "March" or month == "April" or month == "May" and 1 <= day <= months[month]:
+    print("Spring")
+elif month == "June" or month == "July" or month == "August" and 1 <= day <= months[month]:
+    print("Summer")
+elif month == "September" or month == "October" or month == "November" and 1 <= day <= months[month]:
+    print("Autumn")
+elif month == "December" or month == "January" or month == "February" and 1 <= day <= months[month]:
+    print("Winter")
+else:
+    print("Please input a valid information")
+
+
+
+numbers = []
+inputs = ''
+while inputs != '0':
+    inputs = input("Enter Name, or 0 to quit': ")
+    numbers.append(inputs)
+numbers = numbers[:-1]
+answer = 0
+for i in numbers:
+    answer += int(i)
+print("The arithmetic average։ ", answer / len(numbers))
+
+
+
+
+for i in range(0, 100):
+    if i % 10 == 0:
+        print(f"{i} Celsius = {1.8 * i + 32} Fahrenheit")
+        
+        
+        
+        
+for i in range(100):
+    if i % 3 == 0 and i % 5 == 0:
+        print("Fizz-Buzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
