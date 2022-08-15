@@ -1,0 +1,107 @@
+#1
+
+# def reFromArray(nums:list):
+#     index = 0
+#     for i in range(len(nums)):
+#         if nums.count(nums[index]) > 1:
+#             del nums[nums.index(nums[index])]
+#         else:
+#             index += 1
+#     return len(nums)
+# print(reFromArray([1,2,3,4,5,6,6,6,7,7,7,8,8,8]))
+
+#3
+# def Contains_Dup(nums:list):
+#     lst=list(set(nums))
+#     if len(lst)==len(nums):
+#         return False
+#     return True
+# print(Contains_Dup([1,2,3,1]))
+
+
+# #4
+# def find_single(nums:list):
+#     for el in nums:
+#         if nums.count(el) == 1:
+#             return el
+# print(find_single([1,3,3,2,2]))
+
+#5
+# def missingNumber( nums: List):
+#     n = len(nums)
+#     for i in range(n + 1):
+#         if i not in nums:
+#             return i
+
+#6
+# def findMaxConsecutiveOnes(self, nums: List):
+#     i = 0
+#     lst = []
+#     count = 0
+#     while i < len(nums):
+#         if nums[i] == 1:
+#             count += 1
+#         else:
+#             lst.append(count)
+#             count = 0
+#         if i == len(nums) - 1:
+#             lst.append(count)
+#         i += 1
+#     return max(lst)
+
+#8
+# def isPrime(n):
+#     if n < 2:
+#         return
+#     for i in range(2, int(n ** 0.5) + 1):
+#         if n % i == 0:
+#             return False
+#     return True
+#
+#
+# def nthPrime(number):
+#     prime_count = 0
+#     num = 1
+#
+#     while prime_count != number:
+#         num += 1
+#         if isPrime(num):
+#             prime_count += 1
+#     return num
+#
+#
+# print(nthPrime(10001))
+
+#9
+# def is_palindrome_3digit():
+#     n = 0
+#     for i in range(999, 99, -1):
+#         for j in range(i, 99, -1):
+#             p = i * j
+#             str_p = str(p)
+#             if str_p == str_p[::-1]:
+#                 n = max(n, p)
+#     return n
+# print(is_palindrome_3digit())
+
+#11
+# def sum_square_difference(n):
+#     square_of_sum = 0
+#     sum_of_square = 0
+#     for i in range(1, n + 1):
+#         square_of_sum += i
+#         sum_of_square += i * i
+#     square_of_sum **= 2
+#     return square_of_sum - sum_of_square
+# print(sum_square_difference(100))
+
+
+#12
+# def largest_prime_factor(number):
+#     n = 2
+#     while n < number:
+#         while number % n == 0:
+#             number //= n
+#         n += 1
+#     return number
+# print(largest_prime_factor(600851475143))
