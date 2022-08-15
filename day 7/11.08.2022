@@ -1,0 +1,78 @@
+#   Bubble Sort
+
+
+# def bubble_sort(lst: list):
+#     for i in range(len(lst)):
+#         swapped=False
+#         for j in range(len(lst) - i - 1):
+#             if lst[j] > lst[j + 1]:
+#                 lst[j + 1], lst[j] = lst[j], lst[j + 1]
+#                 swapped=True
+#         if not swapped:
+#             break
+#
+#     return lst
+#
+#
+# print(bubble_sort([1, 2, 5, 7, 2, 4, 6, -9, 0, -2, -8, 4, 7]))
+
+# Selection sort
+
+# def SelectionSort(lst: list):
+#     for i in range(len(lst)):
+#         min = i
+#         for j in range(i + 1, len(lst)):
+#             if lst[j] < lst[min]:
+#                 min = j
+#         if min != i:
+#             lst[i], lst[min] = lst[min], lst[i]
+#     return lst
+#
+#
+# print(SelectionSort([1, 2, 5, 7, 2, 4, 6, -9, 0, -2, -8, 4, 7]))
+
+#insertion Sort
+#
+# def InsertionSort(lst: list):
+#     for i in range(len(lst)):
+#         for j in range(i + 1, len(lst)):
+#             if lst[i] > lst[j]:
+#                 lst[i], lst[j] = lst[j], lst[i]
+#     return lst
+#
+#
+# print(InsertionSort([1, 2, 5, 7, 2, 4, 6, -9, 0, -2, -8, 4, 7]))
+
+#Marge Sort
+# 
+# def merge_sort(nums):
+#     if len(nums) > 1:
+#         mid = len(nums) // 2
+#         left = nums[:mid]
+#         right = nums[mid:]
+# 
+#         merge_sort(right)
+#         merge_sort(left)
+# 
+#         i = j = k = 0
+#         while i < len(left) and j < len(right):
+#             if left[i] < right[j]:
+#                 nums[k] = left[i]
+#                 i += 1
+#             else:
+#                 nums[k] = right[j]
+#                 j += 1
+#             k += 1
+# 
+#         while i < len(left):
+#             nums[k] = left[i]
+#             i += 1
+#             k += 1
+# 
+#         while j < len(right):
+#             nums[k] = right[j]
+#             j += 1
+#             k += 1
+# 
+#     return nums
+# print(merge_sort([5, 15, -2, 0, -8, 35]))
