@@ -1,0 +1,123 @@
+# 1
+# def build(target, n):
+#     res= []
+#     c = 0
+#     for i in range(1, n + 1):
+#         res.append("Push")
+#         c += 1
+#         if i not in target:
+#             res.append("Pop")
+#             c -= 1
+#         if c == len(target):
+#             break
+#     return res
+#
+
+
+# 2
+# def intersect(lst1: list, lst2: list):
+#     result = []
+#     for el_1 in lst1:
+#         for el_2 in lst2:
+#             if el_1 == el_2:
+#                 result.append(el_2)
+#     return result
+# print(intersect([1,2,3,4,5],[1,2,3]))
+
+# 3
+# def degree(lst:list):
+#     max_count=lst.count(lst[0])
+#     element=lst[0]
+#     index2=None
+#     for el in lst:
+#         if max_count<lst.count(el):
+#             max_count=lst.count(el)
+#             element=el
+#     index1=lst.index(element)
+#     i=len(lst)-1
+#     while i>=0:
+#         if element==lst[i]:
+#             index2=i
+#             break
+#             i-=1
+#     return [lst[i] for i in range(index1,index2+1)]
+# print(degree([1,2,3,2,3,2,3,1,2,3,4]))
+
+
+# 4
+# def sort(nums: list):
+#     res1 = []
+#     res2 = []
+#     for i in nums:
+#         if i % 2 == 0:
+#             res1.append(i)
+#         else:
+#             res2.append(i)
+#     return res1 + res2
+# print(sort([1,2,3,4,5,6,7]))
+
+# 5
+
+# def count(lst: list):
+#     result = []
+#     for i in range(len(lst)):
+#         if lst.count(i) == 1:
+#             result.append(i)
+#     return sum(result)
+# print(count([1,2,3,4,5,1,2,3,4,7,8,10]))
+
+# 6
+
+# def StrStr(haystack,needle):
+#    if len(needle)==0:
+#        return 0
+#    elif len(haystack.split(needle))!=1:
+#        return len(haystack.split(needle))
+#    else:
+#        return -1
+# print(StrStr("hello","ll"))
+
+# 7
+
+# def LenghtLastWord(s:str):
+#     m=s.split(" ")
+#     for i in reversed(m):
+#         if len(i)>0:
+#             return len(i),i
+#     return -1
+# print(LenghtLastWord("   fly me   to   the moon  "))
+
+# 8
+
+# import string
+#
+# def palindrom(s:str):
+#     s=s.translate(str.maketrans(" "," ",string.punctuation))
+#     s=s.replace(" ","")
+#     s=s.lower()
+#     if s==s[::-1]:
+#         return True
+#     return False
+# print(palindrom("A man, a plan, a canal: Panama"))
+
+# 9
+# import string
+#
+# def valid_email(lst: list):
+#     count=0
+#     for elem in lst:
+#         if "+" in elem:
+#             indexP = str(elem).index("+")
+#             indexSh = str(elem).index("@")
+#             elem=elem[:indexP]+elem[indexSh:]
+#             indexSh=str(elem).index("@")
+#         s1=elem[:indexSh]
+#         s2=elem[indexSh:]
+#         s1=s1.translate(str.maketrans(" "," ",string.punctuation))
+#
+#
+#         lst[count]=s1+s2
+#         count+=1
+#     return lst
+#
+# print(valid_email(["test.email+alex@leetcode.com"]))
